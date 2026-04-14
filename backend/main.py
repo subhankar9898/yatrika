@@ -32,9 +32,9 @@ async def lifespan(app: FastAPI):
         print("Mongo close skipped:", e)
     
     try:
-        await close_redis()
+        await connect_redis()
     except Exception as e:
-        print("Redis close skipped:", e)
+        print("Redis skipped:", e)
 
 
 app = FastAPI(

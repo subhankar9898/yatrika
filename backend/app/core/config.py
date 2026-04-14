@@ -11,17 +11,17 @@ class Settings(BaseSettings):
     FRONTEND_URL: str = "http://localhost:5173"
 
     # MySQL
-    DATABASE_URL: str
+    DATABASE_URL: str = ""
 
     # MongoDB
-    MONGODB_URI: str
+    MONGODB_URI: str = ""
     MONGODB_DB_NAME: str = "yatrika_logs"
 
     # Redis
     REDIS_URL: str = "redis://localhost:6379/0"
 
     # JWT
-    JWT_SECRET: str
+    JWT_SECRET: str = "abc123"
     JWT_ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 15
     REFRESH_TOKEN_EXPIRE_DAYS: int = 7

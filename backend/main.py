@@ -17,7 +17,7 @@ async def lifespan(app: FastAPI):
     print(f"🚀 Starting {settings.APP_NAME} API...")
     if engine:
         Base.metadata.create_all(bind=engine)
-    print("✅ MySQL tables ready")
+        print("✅ MySQL tables ready")
     try:
         await connect_mongo()
     except Exception as e:

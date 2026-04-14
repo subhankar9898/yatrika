@@ -15,27 +15,37 @@ from app.api.v1 import auth, places, guides, bookings, admin, notifications, exp
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     print(f"🚀 Starting {settings.APP_NAME} API...")
+
     if engine:
         Base.metadata.create_all(bind=engine)
         print("✅ MySQL tables ready")
+
+    # MongoDB
     try:
         await connect_mongo()
     except Exception as e:
         print("MongoDB skipped:", e)
-    await connect_redis()
-    print(f"✅ {settings.APP_NAME} API is live!")
-    yield
-    
-    try:
-        await close_mongo()
-    except Exception as e:
-        print("Mongo close skipped:", e)
-    
+
+    # Redis
     try:
         await connect_redis()
     except Exception as e:
         print("Redis skipped:", e)
 
+    print(f"✅ {settings.APP_NAME} API is live!")
+
+    yield
+
+    # Shutdown
+    try:
+        await close_mongo()
+    except Exception as e:
+        print("Mongo close skipped:", e)
+
+    try:
+        await close_redis()
+    except Exception as e:
+        print("Redis close skipped:", e)
 
 app = FastAPI(
     title=f"{settings.APP_NAME} API",

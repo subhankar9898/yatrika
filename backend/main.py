@@ -21,7 +21,7 @@ async def lifespan(app: FastAPI):
     try:
         await connect_mongo()
     except Exception as e:
-    print("⚠️ MongoDB skipped:", e)
+        print("MongoDB skipped:", e)
     await connect_redis()
         print(f"✅ {settings.APP_NAME} API is live!")
     yield

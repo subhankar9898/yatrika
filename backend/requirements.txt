@@ -1,0 +1,55 @@
+# FastAPI core
+fastapi==0.111.0
+uvicorn[standard]==0.30.1
+python-multipart==0.0.9
+
+# Database — MySQL
+sqlalchemy==2.0.30
+pymysql==1.1.1
+alembic==1.13.1
+cryptography==42.0.8
+
+# Database — MongoDB
+motor==3.4.0
+pymongo==4.7.2
+
+# Redis (OTP rate limiting)
+redis==5.0.4
+
+# Authentication
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+bcrypt==4.1.3
+httpx==0.27.0
+
+# Pydantic & settings
+pydantic==2.7.1
+pydantic-settings==2.3.0
+pydantic[email]==2.7.1
+python-dotenv==1.0.1
+
+# Email
+jinja2==3.1.4
+
+# Cloudinary (image uploads)
+cloudinary==1.40.0
+
+# Background tasks
+apscheduler==3.10.4
+
+# Anomaly Detection / ML
+scikit-learn==1.5.0
+pandas==2.2.2
+numpy==1.26.4
+pyod==2.0.1
+joblib==1.4.2
+
+# Utilities
+python-dateutil==2.9.0
+Pillow==10.3.0
+openpyxl==3.1.4
+faker==25.8.0
+
+# Q8 — Export support
+openpyxl==3.1.4
+reportlab==4.2.2

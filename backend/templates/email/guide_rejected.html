@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Guide Registration Update</h2>
+<p>Hi <strong>{{ full_name }}</strong>,</p>
+<p>After reviewing your guide registration, we're unable to approve your account at this time.</p>
+{% if reason %}<div class="highlight"><strong>Reason:</strong> {{ reason }}</div>{% endif %}
+<p>You may re-apply after addressing the feedback above. For queries, contact our support team.</p>
+{% endblock %}

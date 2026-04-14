@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="success">Your Guide Account is Approved! ✅</h2>
+<p>Congratulations <strong>{{ full_name }}</strong>! Your guide account on Yatrika has been approved.</p>
+<p>You can now log in and start setting up your tour slots.</p>
+<a href="{{ login_url }}" class="btn">Log In to Your Dashboard →</a>
+{% endblock %}

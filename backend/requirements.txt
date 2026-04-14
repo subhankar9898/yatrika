@@ -38,10 +38,10 @@ cloudinary==1.40.0
 apscheduler==3.10.4
 
 # Anomaly Detection / ML
-# scikit-learn==1.5.0
-# pandas==2.2.2
+scikit-learn==1.5.0
+pandas==2.2.2
 numpy==1.26.4
-# pyod==2.0.1
+pyod==2.0.1
 joblib==1.4.2
 
 # Utilities

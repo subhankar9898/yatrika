@@ -25,8 +25,16 @@ async def lifespan(app: FastAPI):
     await connect_redis()
     print(f"✅ {settings.APP_NAME} API is live!")
     yield
-    await close_mongo()
-    await close_redis()
+    
+    try:
+        await close_mongo()
+    except Exception as e:
+        print("Mongo close skipped:", e)
+    
+    try:
+        await close_redis()
+    except Exception as e:
+        print("Redis close skipped:", e)
 
 
 app = FastAPI(

@@ -15,7 +15,8 @@ from app.api.v1 import auth, places, guides, bookings, admin, notifications, exp
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     print(f"🚀 Starting {settings.APP_NAME} API...")
-    Base.metadata.create_all(bind=engine)
+    if engine:
+        Base.metadata.create_all(bind=engine)
     print("✅ MySQL tables ready")
     await connect_mongo()
     await connect_redis()

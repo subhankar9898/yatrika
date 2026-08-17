@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Verification Call Scheduled</h2>
+<p>Hi <strong>{{ full_name }}</strong>,</p>
+<p>Your Yatrika guide verification call has been scheduled. Please join at the time below.</p>
+<div class="highlight">
+  <p style="margin:0 0 8px;"><strong>Meeting:</strong> {{ meet_title }}</p>
+  <p style="margin:0 0 8px;"><strong>Date &amp; time:</strong> {{ scheduled_at_display }}</p>
+  <p style="margin:0;"><strong>Join link:</strong> <a href="{{ meet_link }}">{{ meet_link }}</a></p>
+</div>
+<p style="text-align:center;">
+  <a href="{{ meet_link }}" class="btn">Join Google Meet</a>
+</p>
+<p>Please be ready a few minutes early. After the call, admin will review your application.</p>
+{% endblock %}

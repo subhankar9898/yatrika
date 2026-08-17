@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>New Place Assignment 🗺️</h2>
+<p>Hi <strong>{{ guide_name }}</strong>,</p>
+<p>You've been assigned to guide tourists at <strong>{{ place_name }}</strong> in <strong>{{ city }}</strong>!</p>
+<p>Please log in to your dashboard to set up your available time slots for this location.</p>
+<a href="{{ dashboard_url }}" class="btn">Go to Dashboard →</a>
+{% endblock %}

@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Place Request Update</h2>
+<p>Hi <strong>{{ full_name }}</strong>, your request to add <strong>{{ place_name }}</strong> was not approved.</p>
+{% if reason %}<div class="highlight"><strong>Reason:</strong> {{ reason }}</div>{% endif %}
+{% endblock %}

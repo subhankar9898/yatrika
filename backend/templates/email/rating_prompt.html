@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>How was your tour? ⭐</h2>
+<p>Hi <strong>{{ user_name }}</strong>, your tour of <strong>{{ place_name }}</strong> with <strong>{{ guide_name }}</strong> is complete!</p>
+<p>Your feedback helps other travellers and motivates our guides. Please take a moment to rate your experience.</p>
+<a href="{{ rating_url }}" class="btn">Rate Your Experience →</a>
+{% endblock %}

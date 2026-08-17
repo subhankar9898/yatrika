@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="warning">⚠️ Low Rating Alert</h2>
+<p>This is an automated alert. Guide <strong>{{ guide_name }}</strong> ({{ guide_email }}) has an average rating of <strong style="color:#E65100;">{{ avg_rating }}/5.0</strong> after {{ total_tours }} completed tours.</p>
+<div class="highlight">Action may be required. Please review the guide's profile and ratings.</div>
+<a href="{{ admin_url }}" class="btn">View in Admin Panel →</a>
+{% endblock %}

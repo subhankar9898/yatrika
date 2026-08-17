@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>New Booking Request 📅</h2>
+<p>Hi <strong>{{ guide_name }}</strong>, you have a new booking request!</p>
+<div class="highlight">
+  <p><strong>Tourist:</strong> {{ user_name }} ({{ user_email }})</p>
+  <p><strong>Place:</strong> {{ place_name }}</p>
+  <p><strong>Date:</strong> {{ slot_date }}</p>
+  <p><strong>Time:</strong> {{ start_time }} – {{ end_time }}</p>
+  {% if user_message %}<p><strong>Message:</strong> {{ user_message }}</p>{% endif %}
+</div>
+<p>Log in to your dashboard to accept or reject this request.</p>
+{% endblock %}
